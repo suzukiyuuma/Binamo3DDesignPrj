@@ -12,6 +12,7 @@
           <router-link to="/">Home</router-link>
           <router-link to="/about">About</router-link>
           <router-link to="/Err404">Err404</router-link>
+          <router-link to="/user">ユーザー一覧</router-link>
         </div>
         <router-view/>
         </div>
