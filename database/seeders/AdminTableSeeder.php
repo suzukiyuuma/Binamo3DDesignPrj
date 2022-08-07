@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use \Illuminate\Database\Eloquent\Factory;
-use Binamo3DDesignPrj/app/Models/Admin;
+// use ../../App/Models/Admin;
+// use App\Models\Admin;
 
 class AdminTableSeeder extends Seeder
 {
@@ -15,6 +16,7 @@ class AdminTableSeeder extends Seeder
      */
     public function run()
     {
-        Admin::factory()->count(15)->create();
+        // Admin::factory()->count(15)->create();
+        \App\Models\Admin::factory(10)->create();  
     }
 }
