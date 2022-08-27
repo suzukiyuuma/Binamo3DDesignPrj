@@ -33,8 +33,7 @@ class AdminFactory extends Factory
             // データをセット
             'admin_code' => $this->faker->randomNumber(),
             'name' => $this->faker->name(),
-            // 'password' => $this->faker->password(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 
+            'password' => $this->faker->password(),
             'role' => $this->faker->randomDigitNotNull(),
             'updated_at' => now(),
             'created_at' => now()
