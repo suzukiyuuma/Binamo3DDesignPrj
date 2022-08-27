@@ -15,7 +15,7 @@ class CreateCreditInfoTable extends Migration
     {
         Schema::create('CreditInfo', function (Blueprint $table) {
             $table->id();
-            $table->string('UserID',50);
+            $table->foreignId('UserId')->constrained('UserInfo');
             $table->integer('CardNumber')->length(50);
             $table->string('CardLimitDate',7);
             $table->string('CardName',50);
