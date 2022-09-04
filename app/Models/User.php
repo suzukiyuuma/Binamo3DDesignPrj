@@ -17,6 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    // 関連づけるDBカラム名
     protected $fillable = [
         'name',
         'email',
