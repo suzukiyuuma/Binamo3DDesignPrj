@@ -11,6 +11,7 @@ class Admin extends Model
     protected $table ='admin'; // 関連づけるテーブル名
 
     // 関連づけるDBカラム名
+    // 関連づけるDBカラム名
     protected $fillabel =[
         'admin_code',
         'name',
