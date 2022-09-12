@@ -9,8 +9,7 @@ class UserInfo extends Model
 {
     use HasFactory;
     protected $table ='UserInfo'; // 関連づけるテーブル名
-
-    // 関連づけるDBカラム名
+    
     protected $fillabel =[
         'id',
         'UserName',
