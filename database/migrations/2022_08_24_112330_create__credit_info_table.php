@@ -22,8 +22,6 @@ class CreateCreditInfoTable extends Migration
             $table->integer('SequlityCode')->length(4);
             $table->integer('DelFlg')->length(1);
             $table->timestamps(); // created_at と updated_atが生成される。
-            
-            
         });
     }
 
