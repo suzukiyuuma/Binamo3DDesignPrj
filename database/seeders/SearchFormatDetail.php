@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class SeachHead extends Seeder
+class SearchFormatDetail extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,6 @@ class SeachHead extends Seeder
      */
     public function run()
     {
-        \App\Models\SeachHead::factory(10)->create();
+        \App\Models\SearchFormatDetail::factory(10)->create();
     }
 }

@@ -3,10 +3,10 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\SeachHead;
+use App\Models\SearchHead;
 use Faker\Generator as Faker;
 
-class SeachHeadFactory extends Factory
+class SearchHeadFactory extends Factory
 {
     /**
      * Define the model's default state.

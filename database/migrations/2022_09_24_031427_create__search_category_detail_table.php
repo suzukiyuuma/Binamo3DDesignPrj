@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSeachHeadTable extends Migration
+class CreateSearchCategoryDetailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateSeachHeadTable extends Migration
      */
     public function up()
     {
-        Schema::create('SeachHead', function (Blueprint $table) {
+        Schema::create('SearchCategoryDetail', function (Blueprint $table) {
             $table->id();
-            $table->string('DelFlg')->length(1);
-            $table->timestamps();
+            $table->foreignId('SearchID'))->constrained('SearchHead');
+            $table->foreignId('SearchCategory')->constrained('CategoryM');
+            $table->integer('DelFlg')->length(1);
         });
     }
 
@@ -27,6 +28,6 @@ class CreateSeachHeadTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('SeachHead');
+        Schema::dropIfExists('SearchCategoryDetail');
     }
 }
