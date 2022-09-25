@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSearchCategoryDetailTable extends Migration
+class CreateKiyakuKbnMTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateSearchCategoryDetailTable extends Migration
      */
     public function up()
     {
-        Schema::create('SearchCategoryDetail', function (Blueprint $table) {
+        Schema::create('KiyakuKbnM', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('SearchID')->constrained('SearchHead');
-            $table->foreignId('SearchCategory')->constrained('CategoryM');
+            $table->text('CategoryName',50);
             $table->integer('DelFlg')->length(1);
         });
     }
@@ -28,6 +27,6 @@ class CreateSearchCategoryDetailTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('SearchCategoryDetail');
+        Schema::dropIfExists('KiyakuKbnM');
     }
 }
