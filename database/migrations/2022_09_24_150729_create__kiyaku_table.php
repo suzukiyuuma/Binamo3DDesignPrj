@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateKiyakuTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('Kiyaku', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('KiyakuKbn')->constrained('KiyakuKbnM');
+            $table->text('KiyakuTitle',200);
+            $table->text('KiyakuNaiyou',2000);
+            $table->integer('DelFlg')->length(1);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('Kiyaku');
+    }
+}

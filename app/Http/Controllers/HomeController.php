@@ -24,5 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+        //$SearchHead = Post::all();
+        //return view('SearchHead.index',compact('posts')); //return view('home');
     }
 }

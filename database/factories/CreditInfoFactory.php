@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\CreditInfo;
-Use App\Models\UserInfo;
+use App\Models\UserInfo;
 use Faker\Generator as Faker;
 
 class CreditInfoFactory extends Factory
